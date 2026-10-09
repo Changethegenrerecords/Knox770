@@ -1,8 +1,645 @@
-<!doctype html>
-<html>
-<head><title>Knox770</title></head>
-<body style="background:black;color:white;font-family:sans-serif;text-align:center;padding:50px">
-<h1>Knox770</h1>
-<p>Official music website - coming soon</p>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#090710">
+
+  <meta name="description" content="KNOX770 official artist website. Dark cinematic hip-hop. Real stories, heavy atmosphere, unforgettable hooks.">
+
+  <title>KNOX770 | Official Artist Website</title>
+
+  <style>
+
+    :root {
+
+      --bg: #090710;
+
+      --panel: #171021;
+
+      --purple: #a855f7;
+
+      --lime: #c6ff35;
+
+      --white: #faf7ff;
+
+      --muted: #b9afc9;
+
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--white);
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      line-height: 1.6;
+
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .top-line {
+
+      height: 4px;
+
+      background: linear-gradient(90deg, var(--purple), var(--lime));
+
+    }
+
+    header {
+
+      padding: 22px 7%;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 18px;
+
+      border-bottom: 1px solid #30213c;
+
+    }
+
+    .logo {
+
+      font-size: 24px;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+    }
+
+    .logo span, h1 span, .album-title span, .quote span {
+
+      color: var(--lime);
+
+    }
+
+    nav {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 20px;
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+    }
+
+    nav a:hover { color: var(--lime); }
+
+    .hero {
+
+      min-height: 540px;
+
+      padding: 95px 7%;
+
+      display: flex;
+
+      align-items: center;
+
+      background:
+
+        radial-gradient(ellipse at 80% 30%, #7428a755, transparent 42%),
+
+        radial-gradient(ellipse at 15% 100%, #a8df2422, transparent 45%),
+
+        linear-gradient(135deg, #090710, #1a1026 65%, #090710);
+
+      overflow: hidden;
+
+    }
+
+    .hero-content { max-width: 760px; }
+
+    .eyebrow, .section-label {
+
+      color: var(--lime);
+
+      font-size: 11px;
+
+      font-weight: bold;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 14px;
+
+    }
+
+    h1 {
+
+      font-size: clamp(58px, 12vw, 112px);
+
+      line-height: .94;
+
+      letter-spacing: -4px;
+
+      font-weight: 900;
+
+    }
+
+    .hero p {
+
+      color: var(--muted);
+
+      font-size: 18px;
+
+      max-width: 570px;
+
+      margin: 24px 0 30px;
+
+    }
+
+    .buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .button {
+
+      display: inline-block;
+
+      padding: 13px 21px;
+
+      border-radius: 5px;
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+    }
+
+    .primary { background: var(--lime); color: #111; }
+
+    .secondary { border: 1px solid var(--purple); }
+
+    section { padding: 75px 7%; }
+
+    h2 {
+
+      font-size: clamp(30px, 5vw, 45px);
+
+      line-height: 1.15;
+
+      margin-bottom: 18px;
+
+    }
+
+    .intro { color: var(--muted); max-width: 650px; margin-bottom: 30px; }
+
+    .album-layout {
+
+      display: grid;
+
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+
+      gap: 40px;
+
+      align-items: start;
+
+    }
+
+    .album-art {
+
+      aspect-ratio: 1;
+
+      padding: 25px;
+
+      border: 1px solid #7942a0;
+
+      border-radius: 10px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      background:
+
+        radial-gradient(circle at 50% 35%, #9d4edd66, transparent 38%),
+
+        linear-gradient(145deg, #251333, #090710 72%);
+
+      box-shadow: 0 15px 50px #0008;
+
+    }
+
+    .album-art small {
+
+      color: var(--lime);
+
+      letter-spacing: 4px;
+
+    }
+
+    .album-title {
+
+      font-size: clamp(36px, 7vw, 70px);
+
+      line-height: .92;
+
+      font-weight: 900;
+
+      letter-spacing: -3px;
+
+    }
+
+    .album-art .credits {
+
+      font-size: 11px;
+
+      letter-spacing: 2px;
+
+      color: var(--muted);
+
+    }
+
+    .tracklist { list-style: none; border-top: 1px solid #34253f; counter-reset: song; }
+
+    .tracklist li {
+
+      counter-increment: song;
+
+      padding: 12px 0;
+
+      border-bottom: 1px solid #34253f;
+
+      display: flex;
+
+      gap: 14px;
+
+      font-size: 14px;
+
+    }
+
+    .tracklist li::before {
+
+      content: counter(song, decimal-leading-zero);
+
+      color: var(--lime);
+
+      font-size: 11px;
+
+      min-width: 22px;
+
+    }
+
+    .note { color: var(--muted); font-size: 12px; margin-top: 16px; }
+
+    .about {
+
+      background: linear-gradient(120deg, #171021, #0d0a13);
+
+      border-top: 1px solid #30213c;
+
+      border-bottom: 1px solid #30213c;
+
+    }
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 35px;
+
+      align-items: center;
+
+    }
+
+    .about p { color: var(--muted); margin-bottom: 15px; }
+
+    .quote {
+
+      padding: 28px;
+
+      border-left: 3px solid var(--lime);
+
+      background: #ffffff06;
+
+      font-size: 23px;
+
+      font-weight: bold;
+
+    }
+
+    .label-section {
+
+      text-align: center;
+
+      background: radial-gradient(ellipse at center, #51206b33, transparent 65%);
+
+    }
+
+    .label-name {
+
+      font-size: clamp(24px, 5vw, 42px);
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+    }
+
+    .tagline { color: var(--lime); font-weight: bold; margin-top: 12px; }
+
+    .label-description {
+
+      color: var(--muted);
+
+      max-width: 620px;
+
+      margin: 15px auto 25px;
+
+    }
+
+    footer {
+
+      padding: 28px 7%;
+
+      text-align: center;
+
+      color: #92879f;
+
+      font-size: 12px;
+
+      border-top: 1px solid #30213c;
+
+    }
+
+    @media (max-width: 700px) {
+
+      .album-layout, .about-grid { grid-template-columns: 1fr; }
+
+      .hero { min-height: 460px; padding-top: 70px; padding-bottom: 70px; }
+
+      header { align-items: flex-start; flex-direction: column; }
+
+      nav { gap: 14px; }
+
+      section { padding-top: 55px; padding-bottom: 55px; }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="top-line"></div>
+
+  <header>
+
+    <a class="logo" href="#home">KNOX<span>770</span></a>
+
+    <nav>
+
+      <a href="#home">Home</a>
+
+      <a href="#music">Music</a>
+
+      <a href="#about">About</a>
+
+      <a href="#label">Record Label</a>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">Official Artist Website</div>
+
+        <h1>KNOX<span>770</span></h1>
+
+        <p>
+
+          Dark cinematic hip-hop. Real stories, heavy atmosphere,
+
+          unforgettable hooks. Welcome to the world of Knox770.
+
+        </p>
+
+        <div class="buttons">
+
+          <a class="button primary"
+
+             href="https://open.spotify.com/search/KNOX770"
+
+             target="_blank" rel="noopener">Listen on Spotify</a>
+
+          <a class="button secondary" href="#music">Explore the Music</a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="music">
+
+      <div class="section-label">The Music</div>
+
+      <h2>FINAL NOTICE</h2>
+
+      <p class="intro">
+
+        Ten tracks. Real stories. Hard truths. A dark cinematic journey
+
+        through consequences, loss, reflection, and second chances.
+
+      </p>
+
+      <div class="album-layout">
+
+        <div class="album-art">
+
+          <small>CHANGE THE GENRE RECORDS PRESENTS</small>
+
+          <div class="album-title">FINAL<br><span>NOTICE</span></div>
+
+          <div class="credits">KNOX770 · 10-TRACK PROJECT</div>
+
+        </div>
+
+        <div>
+
+          <ol class="tracklist">
+
+            <li>My Name Is Knox</li>
+
+            <li>No Good News on the News</li>
+
+            <li>The Weatherman</li>
+
+            <li>Wrongfully Accused</li>
+
+            <li>I Had to Let Her Go</li>
+
+            <li>I’m Just a Ghost in This House</li>
+
+            <li>He Died for You and Me</li>
+
+            <li>The Door Is Closed for Good</li>
+
+            <li>Final Notice</li>
+
+            <li>Man in the Mirror</li>
+
+          </ol>
+
+          <p class="note">
+
+            Explore the catalog and discover more Knox770 music.
+
+          </p>
+
+          <div class="buttons" style="margin-top:20px">
+
+            <a class="button primary"
+
+               href="https://open.spotify.com/search/KNOX770"
+
+               target="_blank" rel="noopener">Find Knox770 on Spotify</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+      <div class="about-grid">
+
+        <div>
+
+          <div class="section-label">Artist Profile</div>
+
+          <h2>More Than a Sound.</h2>
+
+          <p>
+
+            Knox770 brings a dark cinematic approach to hip-hop,
+
+            combining emotional storytelling, heavy atmosphere,
+
+            memorable hooks, and honest reflections on life.
+
+          </p>
+
+          <p>
+
+            Every song opens another chapter: the choices we make,
+
+            the people we lose, the truth we face, and the chance
+
+            to look in the mirror and change.
+
+          </p>
+
+        </div>
+
+        <div class="quote">
+
+          Real stories.<br>
+
+          Heavy atmosphere.<br>
+
+          <span>Unforgettable music.</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="label-section" id="label">
+
+      <div class="section-label">Independent Music. New Possibilities.</div>
+
+      <div class="label-name">CHANGE THE GENRE <span>RECORDS</span></div>
+
+      <p class="tagline">Independent. AI-Powered. Artist-Driven.</p>
+
+      <p class="label-description">
+
+        An independent AI music label creating original artists,
+
+        music, and stories across genres. Built on creativity,
+
+        innovation, and the freedom to change the sound.
+
+      </p>
+
+      <div class="buttons" style="justify-content:center">
+
+        <a class="button primary"
+
+           href="https://open.spotify.com/search/Change%20The%20Genre%20Records"
+
+           target="_blank" rel="noopener">Discover Our Music</a>
+
+        <a class="button secondary"
+
+           href="mailto:changethegenre@gmail.com">Contact the Label</a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>KNOX770 · Official Artist Website</p>
+
+    <p>Presented by Change The Genre Records</p>
+
+    <p style="margin-top:10px">
+
+      © <span id="year">2026</span> Change The Genre Records. All rights reserved.
+
+    </p>
+
+  </footer>
+
 </body>
+
 </html>
